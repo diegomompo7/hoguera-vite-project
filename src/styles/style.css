@@ -1,0 +1,52 @@
+.lang {
+  font-family: "Righteous";
+  color: white;
+  text-align: center;
+  padding-top: 0.625rem;
+  padding-right: 1rem;
+  margin-bottom: 20px;
+}
+.lang button {
+  background-color: blue;
+  border: none;
+  color: white;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+.logo {
+  border: 1px solid blue;
+  margin: auto;
+  width: 70%;
+}
+.logo img {
+  width: 100%;
+}
+
+.mySwiper {
+  margin-top: 50px;
+  background-color: #D9D9D9;
+}
+.mySwiper__up {
+  display: flex;
+}
+.mySwiper__up img {
+  width: 50%;
+  text-align: left;
+  padding-left: 7px;
+  padding-top: 10px;
+  padding-right: 30px;
+}
+.mySwiper__up--title {
+  font-size: 24px;
+  align-self: center;
+}
+.mySwiper__description {
+  padding: 20px;
+  margin: auto;
+  text-align: center;
+}
+
+body {
+  width: 89%;
+  margin: auto;
+}/*# sourceMappingURL=style.css.map */
