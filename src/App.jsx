@@ -14,19 +14,31 @@ function App() {
   const [locale, setLocale] = useState(navigator.language);
   const [messages, setMessages] = useState();
 
+  const params = new URLSearchParams(window.location.search);
+
+  const lang = params.get('lang');
+
+  useEffect(() => {
+
+    if(lang != null) {
+      setLocale(lang);
+    } else{
+      setLocale("es")
+    }
+
+  },[])
+
   useEffect(() => {
     switch (locale) {
-      case "es-ES":
+      case "es":
         setMessages(Spanish);
         break;
-      case "en-EN":
+      case "en":
         setMessages(English);
         break;
-      case "va-VA":
+      case "va":
         setMessages(Valencia);
         break;
-      default:
-        setMessages(Spanish);
     }
   }, [locale]);
 

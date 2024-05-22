@@ -11,9 +11,14 @@ import "../styles/_layout.scss"
 
 
 export const Scenes = () => {
+
+    const params = new URLSearchParams(window.location.search);
+
+    const initScene = params.get('init');
+
     return(
     <>
-     <Swiper navigation={true} modules={[Navigation]} className="mySwiper" initialSlide={5}>
+     <Swiper navigation={true} modules={[Navigation]} className="mySwiper" initialSlide={initScene!=null ? initScene-1 : 0}>
         <SwiperSlide>
             <div className='mySwiper__up'>
             <img src={scene1} alt="" />
