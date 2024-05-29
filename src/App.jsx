@@ -23,7 +23,7 @@ function App() {
     if(lang != null) {
       setLocale(lang);
     } else{
-      setLocale("es")
+      setLocale("va")
     }
 
   },[])
