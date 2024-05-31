@@ -1,3 +1,15 @@
+
+
 {
-    "scene" : "Escena"
+    "scene1" : "Escena 1 Español",
+    "description1": "Descripción 1 Español",
+    "scene2" : "Escena 2 Español",
+    "description2": "Descripción 2 Español",
+    "scene3" : "Escena 3 Español",
+    "description3": "Descripción 3 Español",
+    "scene4" : "Escena 4 Español",
+    "description4": "Descripción 4 Español",
+    "scene5" : "Escena 5 Español",
+    "description5": "Descripción 5 Español",
+    "audio1": "../assets/audio/Spanish/Scene1.mp3"
 }

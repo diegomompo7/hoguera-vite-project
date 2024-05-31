@@ -1,3 +1,12 @@
 {
-    "scene" : "Scene"
+    "scene1" : "Scene 1 Inglés",
+    "description1": "Description 1 Inglés",
+    "scene2" : "Scene 2 Inglés",
+    "description2": "Description 2 Inglés",
+    "scene3" : "Scene 3 Inglés",
+    "description3": "Description 3 Inglés",
+    "scene4" : "Scene 4 Inglés",
+    "description4": "Description 4 Inglés",
+    "scene5" : "Scene 5 Inglés",
+    "description5": "Description 5 Inglés"
 }
