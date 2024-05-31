@@ -16,7 +16,7 @@ body {
 
 .logo {
   margin: auto;
-  width: 30%;
+  width: 20%;
 }
 .logo img {
   width: 100%;
@@ -24,12 +24,12 @@ body {
 
 .mySwiper {
   margin-top: 50px;
-  height: 350px;
+  height: 400px;
   background-color: black;
   text-align: center;
   color: yellow;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 18px;
+  font-size: 20px;
 }
 .mySwiper__slider {
   display: flex;
