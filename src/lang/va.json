@@ -8,5 +8,10 @@
     "scene4" : "Escena 4 Valenciano",
     "description4": "Descripció 4 Valenciano",
     "scene5" : "Escena 5 Valenciano",
-    "description5": "Descripció 5 Valenciano"
+    "description5": "Descripció 5 Valenciano",
+    "audio1": "/src/assets/audio/Valencia/Scene1.mp3",
+    "audio2": "/src/assets/audio/Valencia/Scene2.mp3",
+    "audio3": "/src/assets/audio/Valencia/Scene3.mp3",
+    "audio4": "/src/assets/audio/Valencia/Scene4.mp3",
+    "audio5": "/src/assets/audio/Valencia/Scene5.mp3"
 }
