@@ -16,7 +16,7 @@ body {
 
 .logo {
   margin: auto;
-  width: 70%;
+  width: 50%;
 }
 .logo img {
   width: 100%;
@@ -28,28 +28,26 @@ body {
   text-align: center;
   color: yellow;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
 }
 .mySwiper__up {
-  display: flex;
   margin-bottom: 30px;
 }
 .mySwiper__up__button-next {
   color: white;
 }
 .mySwiper__up img {
-  width: 50%;
+  width: 35%;
   text-align: left;
   padding-left: 7px;
   padding-top: 10px;
-  padding-right: 30px;
+  padding-right: 10px;
 }
 .mySwiper__up--title {
-  font-size: 18px;
   align-self: center;
 }
 .mySwiper__description {
   margin: auto;
-  font-size: 18px;
   text-align: center;
 }
 .mySwiper__play {

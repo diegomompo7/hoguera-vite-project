@@ -18,7 +18,7 @@ body{
 }
 .logo{
     margin: auto;
-    width: 70%;
+    width: 50%;
 
     img{
         width: 100%;
@@ -32,10 +32,10 @@ body{
     text-align: center;
     color: yellow;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
     
 
     &__up{
-        display: flex;
         margin-bottom: 30px;
 
     &__button-next{
@@ -44,15 +44,14 @@ body{
     
 
     img{
-        width: 50%;
+        width: 35%;
         text-align: left;
         padding-left: 7px;
         padding-top: 10px;
-        padding-right: 30px;
+        padding-right: 10px;
     }
 
     &--title{
-        font-size: 18px;
         align-self: center;
     }
 
@@ -60,7 +59,6 @@ body{
 
     &__description{
         margin: auto;
-        font-size: 18px;
         text-align: center;
     }
     &__play{
