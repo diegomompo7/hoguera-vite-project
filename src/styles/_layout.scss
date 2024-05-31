@@ -28,7 +28,7 @@ body{
 }
 .mySwiper{
     margin-top: 50px;
-    height: 500px;
+    height: 350px;
     background-color: black;
     text-align: center;
     color: yellow;
@@ -43,7 +43,7 @@ body{
     
 
     &__up{
-        margin-bottom: 30px;
+        margin-bottom: 0px;
 
     &__button-next{
         color: white;
@@ -67,7 +67,7 @@ body{
     &__play{
         margin-top: 40px;
         margin: auto;
-        font-size: 50px;
+        font-size: 35px;
         border-radius: 50px;
         padding: 20px 0px;
         width: 30%;
