@@ -32,6 +32,7 @@ export const Scenes = () => {
             if (ref.current) {
                 ref.current.pause();
                 ref.current.currentTime = 0;
+                ref.current.load();
                 setIsPlayed(prevState => prevState.map((state, i) => i === index ? false : state)); // Reiniciar el estado de reproducción de la escena
             }
         });
@@ -55,10 +56,10 @@ export const Scenes = () => {
     const controlAudio = (sceneNumber) => {
         setIsPlayed(prevState => {
             const newState = [...prevState];
-            newState[sceneNumber] = !newState[sceneNumber];
+            newState[sceneNumber - 1] = !newState[sceneNumber - 1];
             return newState;
         });
-        const audioIndex = sceneNumber;
+        const audioIndex = sceneNumber - 1;
         const audio = audioRefs.current[audioIndex].current;
         console.log(audioIndex)
         if (audio) {
@@ -93,7 +94,7 @@ const handleAudioEnded = (sceneNumber) => {
                             <source src={intl.formatMessage({ id: `audio${index + 1}` })} type="audio/mpeg" />
                             Tu navegador no soporta el elemento de audio.
                         </audio>{console.log(intl.formatMessage({ id: `audio${index + 1}` }))}
-                        <button className='mySwiper__play' onClick={() => controlAudio(index)}>
+                        <button className='mySwiper__play' onClick={() => controlAudio(index + 1)}>
                             {isPlayed[index] ? <HiSpeakerXMark /> : <HiSpeakerWave />}
                         </button>
                     </SwiperSlide>
