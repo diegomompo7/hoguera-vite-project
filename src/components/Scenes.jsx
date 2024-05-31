@@ -1,3 +1,4 @@
+/* eslint-disable no-mixed-spaces-and-tabs */
 /* eslint-disable no-unused-vars */
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -7,11 +8,13 @@ import scene1 from '../assets/img/scene1.png';
 import { FormattedMessage } from "react-intl";
 import one from "../assets/audio/1.mp3";
 import React, { useRef } from 'react';
+import { FaPlay } from "react-icons/fa";
 
 // import required modules
 import { Navigation } from 'swiper/modules';
 import "../styles/_layout.scss"
 
+import 'swiper/css'
 
 export const Scenes = () => {
 
@@ -23,14 +26,14 @@ export const Scenes = () => {
 
     const handleSlideChange = () => {
         if (audioRef.current && !audioRef.current.paused) {
-          audioRef.current.pause();
-          audioRef.current.currentTime = 0;
+            audioRef.current.pause();
+            audioRef.current.currentTime = 0;
         }
-      };
+    };
 
     return (
         <div>
-            <Swiper navigation={true} modules={[Navigation]} className="mySwiper" initialSlide={initScene != null ? initScene - 1 : 0} onSlideChange={handleSlideChange}>
+            <Swiper  modules={[Navigation]} className="mySwiper" initialSlide={initScene != null ? initScene - 1 : 0} onSlideChange={handleSlideChange} navigation={true}>
                 <SwiperSlide>
                     <div className='mySwiper__up'>
                         <img src={scene1} alt="" />
@@ -41,7 +44,7 @@ export const Scenes = () => {
                         <source src={one} type="audio/mpeg" />
                         Tu navegador no soporta el elemento de audio.
                     </audio>
-                    <button className='mySwiper__play' onClick={() => audioRef.current.play()}>Play</button>
+                    <button className='mySwiper__play' onClick={() => audioRef.current.play()}><FaPlay /></button>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className='mySwiper__up'>
@@ -91,7 +94,9 @@ export const Scenes = () => {
                     </audio>
                     <button className='mySwiper__play' onClick={() => audioRef.current.play()}>Play</button>
                 </SwiperSlide>
+    
             </Swiper>
+            
         </div>
     )
 }
