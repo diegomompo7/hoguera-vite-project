@@ -8,7 +8,7 @@ import scene1 from '../assets/img/scene1.png';
 import { FormattedMessage } from "react-intl";
 import one from "../assets/audio/1.mp3";
 import React, { useRef } from 'react';
-import { FaPlay } from "react-icons/fa";
+import { HiSpeakerWave } from "react-icons/hi2";
 
 // import required modules
 import { Navigation } from 'swiper/modules';
@@ -34,7 +34,7 @@ export const Scenes = () => {
     return (
         <div>
             <Swiper  modules={[Navigation]} className="mySwiper" initialSlide={initScene != null ? initScene - 1 : 0} onSlideChange={handleSlideChange} navigation={true}>
-                <SwiperSlide>
+                <SwiperSlide className='mySwiper__slider'>
                     <div className='mySwiper__up'>
                         <h1 className='mySwiper__up--title'> <FormattedMessage id="scene"></FormattedMessage> 1</h1>
                     </div>
@@ -43,7 +43,7 @@ export const Scenes = () => {
                         <source src={one} type="audio/mpeg" />
                         Tu navegador no soporta el elemento de audio.
                     </audio>
-                    <button className='mySwiper__play' onClick={() => audioRef.current.play()}><FaPlay /></button>
+                    <button className='mySwiper__play' onClick={() => audioRef.current.play()}><HiSpeakerWave /></button>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className='mySwiper__up'>
@@ -54,7 +54,7 @@ export const Scenes = () => {
                         <source src={one} type="audio/mpeg" />
                         Tu navegador no soporta el elemento de audio.
                     </audio>
-                    <button className='mySwiper__play' onClick={() => audioRef.current.play()}><FaPlay /></button>
+                    <button className='mySwiper__play' onClick={() => audioRef.current.play()}><HiSpeakerWave /></button>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className='mySwiper__up'>
@@ -65,7 +65,7 @@ export const Scenes = () => {
                         <source src={one} type="audio/mpeg" />
                         Tu navegador no soporta el elemento de audio.
                     </audio>
-                    <button className='mySwiper__play' onClick={() => audioRef.current.play()}><FaPlay /></button>
+                    <button className='mySwiper__play' onClick={() => audioRef.current.play()}><HiSpeakerWave /></button>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className='mySwiper__up'>
@@ -76,7 +76,7 @@ export const Scenes = () => {
                         <source src={one} type="audio/mpeg" />
                         Tu navegador no soporta el elemento de audio.
                     </audio>
-                    <button className='mySwiper__play' onClick={() => audioRef.current.play()}><FaPlay /></button>
+                    <button className='mySwiper__play' onClick={() => audioRef.current.play()}><HiSpeakerWave /></button>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className='mySwiper__up'>
@@ -87,7 +87,7 @@ export const Scenes = () => {
                         <source src={one} type="audio/mpeg" />
                         Tu navegador no soporta el elemento de audio.
                     </audio>
-                    <button className='mySwiper__play' onClick={() => audioRef.current.play()}><FaPlay /></button>
+                    <button className='mySwiper__play' onClick={() => audioRef.current.play()}><HiSpeakerWave /></button>
                 </SwiperSlide>
     
             </Swiper>

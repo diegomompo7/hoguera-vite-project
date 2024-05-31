@@ -16,7 +16,7 @@ body {
 
 .logo {
   margin: auto;
-  width: 50%;
+  width: 30%;
 }
 .logo img {
   width: 100%;
@@ -24,11 +24,16 @@ body {
 
 .mySwiper {
   margin-top: 50px;
+  height: 500px;
   background-color: black;
   text-align: center;
   color: yellow;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 18px;
+}
+.mySwiper__slider {
+  display: flex;
+  flex-direction: column;
 }
 .mySwiper__up {
   margin-bottom: 30px;
@@ -43,18 +48,17 @@ body {
   padding-top: 10px;
   padding-right: 10px;
 }
-.mySwiper__up--title {
-  align-self: center;
-}
 .mySwiper__description {
   margin: auto;
   text-align: center;
 }
 .mySwiper__play {
   margin-top: 40px;
-  margin-bottom: 20px;
-  font-size: 20px;
-  padding: 10px 20px;
+  margin: auto;
+  font-size: 50px;
+  border-radius: 50px;
+  padding: 20px 0px;
+  width: 30%;
   border: none;
   background-color: black;
   color: yellow;
