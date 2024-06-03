@@ -1,9 +1,9 @@
 import "../styles/_layout.scss"
 import { LanguageSelector } from "../App.jsx";
 import { useContext } from "react";
-import valencia from "../assets/img/valencia.svg"
-import spain from "../assets/img/spain.svg"
-import uk from "../assets/img/uk.svg"
+import valencia from "../../public/assets/img/valencia.svg"
+import spain from "../../public/assets/img/spain.svg"
+import uk from "../../public/assets/img/uk.svg"
 
 export const Languages = () => {
     const { setLanguage } = useContext(LanguageSelector);

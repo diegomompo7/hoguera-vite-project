@@ -1,6 +1,6 @@
 import "./App.css";
 import { Languages } from "./components/Languages";
-import logo from "./assets/img/logo.png";
+import logo from "../public/assets/img/logo.png";
 import { Scenes } from "./components/Scenes";
 import { IntlProvider } from "react-intl";
 import English from "./lang/en.json";
