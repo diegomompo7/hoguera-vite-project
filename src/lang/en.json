@@ -9,9 +9,9 @@
     "description4": "Description 4 Inglés",
     "scene5" : "Scene 5 Inglés",
     "description5": "Description 5 Inglés",
-    "audio1": "/src/assets/audio/English/Scene1.mp3",
-    "audio2": "/src/assets/audio/English/Scene2.mp3",
-    "audio3": "/src/assets/audio/English/Scene3.mp3",
-    "audio4": "/src/assets/audio/English/Scene4.mp3",
-    "audio5": "/src/assets/audio/English/Scene5.mp3"
+    "audio1": "/assets/audio/English/Scene1.mp3",
+    "audio2": "/assets/audio/English/Scene2.mp3",
+    "audio3": "/assets/audio/English/Scene3.mp3",
+    "audio4": "/assets/audio/English/Scene4.mp3",
+    "audio5": "/assets/audio/English/Scene5.mp3"
 }
