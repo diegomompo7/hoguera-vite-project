@@ -8,13 +8,13 @@ export const Layout = () => {
     return (
         <>
             <Languages></Languages>
-            <div className="header">
-                <img src={tecnocasa} alt="" className="header__tecnocasa" />
+                <div className="header">
                 <img src={logo} alt="" className="header__logo"/>
-                <img src={electrodepot} alt="" className="header__electrodepot" />
-            </div>
-            <div className="logo">
-                <img src={logo} alt="" />
+                <div className="header__sponsor">
+                    <img src={tecnocasa} alt="" className="header__sponsor--tecnocasa" />
+                    <img src={electrodepot} alt="" className="header__sponsor--electrodepot" />
+                </div>
+
             </div>
             <Outlet></Outlet>
         </>

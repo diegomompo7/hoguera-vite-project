@@ -16,25 +16,17 @@ body {
 
 .header {
   display: flex;
-  margin-bottom: 20px;
+  justify-content: center;
   gap: 30px;
-}
-.header__tecnocasa {
-  width: 100%;
 }
 .header__logo {
   width: 25%;
 }
-.header__electrodepot {
-  width: 100%;
+.header__sponsor {
+  width: 50%;
+  align-self: center;
 }
-
-.logo {
-  margin: auto;
-  background-color: red;
-  width: 25%;
-}
-.logo img {
+.header__sponsor img {
   width: 100%;
 }
 
