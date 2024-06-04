@@ -1,12 +1,12 @@
 import "./App.css";
-import { Languages } from "./components/Languages";
-import logo from "../public/assets/img/logo.png";
 import { Scenes } from "./components/Scenes";
 import { IntlProvider } from "react-intl";
 import English from "./lang/en.json";
 import Spanish from "./lang/es.json";
 import Valencia from "./lang/va.json";
 import { createContext, useEffect, useState } from "react";
+import { Layout } from "./pages/Layout";
+import { RouterProvider, Route, createBrowserRouter, createRoutesFromElements} from 'react-router-dom';
 
 export const LanguageSelector = createContext(null);
 
@@ -20,13 +20,13 @@ function App() {
 
   useEffect(() => {
 
-    if(lang != null) {
+    if (lang != null) {
       setLocale(lang);
-    } else{
+    } else {
       setLocale("va")
     }
 
-  },[])
+  }, [])
 
   useEffect(() => {
     switch (locale) {
@@ -42,17 +42,22 @@ function App() {
     }
   }, [locale]);
 
+  
+  const appRouter = createBrowserRouter(createRoutesFromElements(
+    <Route path="/" element={<Layout />}>
+      <Route path="content" element={<Scenes />}></Route>
+  </Route>
+  ))
+
   return (
     <>
       <LanguageSelector.Provider
         value={{ language: locale, setLanguage: setLocale }}
       >
         <IntlProvider messages={messages} locale={locale}>
-          <Languages></Languages>
-          <div className="logo">
-            <img src={logo} alt="" />
-          </div>
-          <Scenes></Scenes>
+          <RouterProvider router={appRouter}>
+
+          </RouterProvider>
         </IntlProvider>
       </LanguageSelector.Provider>
     </>
