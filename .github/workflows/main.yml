@@ -23,8 +23,10 @@ jobs:
           script: |
             cd hoguera-vite-project/
             git pull origin main
-            rm -rf /opt/bitnami/nginx/html/assets/ 
+            cd /opt/bitnami/nginx/html/
+            rm -rf assets/
             rm index.html vite.svg
+            cd /home/bitnami/hoguera-vite-project/
             npm run build
             mv dist/* /opt/bitnami/nginx/html/
         
