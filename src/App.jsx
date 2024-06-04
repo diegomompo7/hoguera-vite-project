@@ -45,7 +45,7 @@ function App() {
   
   const appRouter = createBrowserRouter(createRoutesFromElements(
     <Route path="/" element={<Layout />}>
-      <Route path="/content" element={<Scenes />}></Route>
+      <Route path="content" element={<Scenes />}></Route>
   </Route>
   ))
 
@@ -55,9 +55,7 @@ function App() {
         value={{ language: locale, setLanguage: setLocale }}
       >
         <IntlProvider messages={messages} locale={locale}>
-          <RouterProvider router={appRouter}>
-
-          </RouterProvider>
+          <RouterProvider router={appRouter}/>
         </IntlProvider>
       </LanguageSelector.Provider>
     </>
