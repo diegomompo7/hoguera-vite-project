@@ -22,7 +22,7 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             cd hoguera-vite-project/
-            npm intall
+            npm install
             git pull origin main
             cd /opt/bitnami/nginx/html/
             rm -rf assets/
