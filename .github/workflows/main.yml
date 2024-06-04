@@ -1,0 +1,30 @@
+name: Deploy to S3
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Ejecutar comando SSH en el servidor remoto
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd  cd hoguera-vite-project/
+            git pull origin main
+            rm -rf /opt/bitnami/nginx/html/assets/ 
+            rm index.html vite.svg 
+            mv dist/* /opt/bitnami/nginx/html/
+        
+
+
+
+
