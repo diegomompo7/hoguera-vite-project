@@ -16,7 +16,10 @@ jobs:
       - name: Ejecutar comando SSH en el servidor remoto
         uses: appleboy/ssh-action@v1.0.3
         with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.PORT }}
           script: |
             cd  cd hoguera-vite-project/
             git pull origin main
