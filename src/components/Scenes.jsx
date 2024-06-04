@@ -23,9 +23,6 @@ export const Scenes = () => {
     const audioRefs = useRef(Array.from({ length: 5 }, () => createRef()))
     const [isPlayed, setIsPlayed] = useState([false, false, false, false, false]); // Un estado para cada escena
 
-    console.log(language)
-    console.log(isPlayed)
-
 
     useEffect(() => {
         audioRefs.current.forEach((ref, index) => {
@@ -61,7 +58,6 @@ export const Scenes = () => {
         });
         const audioIndex = sceneNumber - 1;
         const audio = audioRefs.current[audioIndex].current;
-        console.log(audioIndex)
         if (audio) {
             if (isPlayed[audioIndex]) {
                 audio.pause();
@@ -93,7 +89,7 @@ const handleAudioEnded = (sceneNumber) => {
                         <audio id={`audioPlayer${index + 1}`} ref={audioRefs.current[index]} onEnded={() => handleAudioEnded(index + 1)}>
                             <source src={intl.formatMessage({ id: `audio${index + 1}` })} type="audio/mpeg" />
                             Tu navegador no soporta el elemento de audio.
-                        </audio>{console.log(intl.formatMessage({ id: `audio${index + 1}` }))}
+                        </audio>
                         <button className='mySwiper__play' onClick={() => controlAudio(index + 1)}>
                             {isPlayed[index] ? <HiSpeakerXMark /> : <HiSpeakerWave />}
                         </button>

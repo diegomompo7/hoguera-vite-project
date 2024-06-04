@@ -9,9 +9,9 @@ export const Languages = () => {
     const { setLanguage } = useContext(LanguageSelector);
     return (
         <div className="lang">
+            <img src={valencia} alt="" onClick={() => setLanguage("va")}/>
             <img src={spain} alt="" onClick={() => setLanguage("es")}/>
             <img src={uk} alt="" onClick={() => setLanguage("en")}/>
-            <img src={valencia} alt="" onClick={() => setLanguage("va")}/>
         </div>
     )
 }
