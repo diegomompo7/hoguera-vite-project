@@ -40,9 +40,9 @@ export const Start = () => {
       {year !== 0 && <p>{year} <FormattedMessage id="year" /></p>}
       {month !== 0 && <p>{month} <FormattedMessage id="month" /></p>}
       {day !== 0 && <p>{day} {day === 1 ? <FormattedMessage id="day" /> : <FormattedMessage id="days" />}</p>}
-      <p>{hours} {hours === 1 ? <FormattedMessage id="hour" /> : <FormattedMessage id="hours" />}</p>
-      <p>{minutes} {minutes === 1 ? <FormattedMessage id="minute" /> : <FormattedMessage id="minutes" />}</p>
-      <p>{seconds} {seconds === 1 ? <FormattedMessage id="second" /> : <FormattedMessage id="seconds" />}</p>
+      <p>{hours<10 ? "0" + hours : hours} {hours === 1 ? <FormattedMessage id="hour" /> : <FormattedMessage id="hours" />}</p>
+      <p>{minutes <10 ? "0" + minutes : minutes} {minutes === 1 ? <FormattedMessage id="minute" /> : <FormattedMessage id="minutes" />}</p>
+      <p>{seconds<10 ? "0" + seconds : seconds } {seconds === 1 ? <FormattedMessage id="second" /> : <FormattedMessage id="seconds" />}</p>
     </div>
   )
 }
