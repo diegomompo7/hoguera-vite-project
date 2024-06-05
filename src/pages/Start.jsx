@@ -3,7 +3,7 @@ import {FormattedMessage } from "react-intl";
 
 export const Start = () => {
 
-  let dateEnd = new Date("2024-06-19 00:00:00");
+  let dateEnd = new Date("2024-06-20 00:00:00");
   let [year, setYear] = useState(0)
   let [month, setMonth] = useState(0)
   let [day, setDay] = useState(0)
