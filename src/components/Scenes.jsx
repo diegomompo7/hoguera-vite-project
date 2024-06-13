@@ -78,7 +78,7 @@ const handleAudioEnded = (sceneNumber) => {
 
     return (
         <div>
-            <Swiper modules={[Navigation]} className="mySwiper" initialSlide={initScene != null ? initScene - 1 : 0} onSlideChange={handleSlideChange} navigation={true}>
+            <Swiper modules={[Navigation]} className="mySwiper" initialSlide={initScene != null ? initScene : 0} onSlideChange={handleSlideChange} navigation={true}>
 
                 {[...Array(5)].map((_, index) => (
                     <SwiperSlide key={index} className='mySwiper__slider'>
@@ -90,7 +90,7 @@ const handleAudioEnded = (sceneNumber) => {
                             <source src={intl.formatMessage({ id: `audio${index}` })} type="audio/mpeg" />
                             Tu navegador no soporta el elemento de audio.
                         </audio>
-                        <button className='mySwiper__play' onClick={() => controlAudio(index + 1)}>
+                        <button className='mySwiper__play' onClick={() => controlAudio(index)}>
                             {isPlayed[index] ? <HiSpeakerXMark /> : <HiSpeakerWave />}
                         </button>
                     </SwiperSlide>
