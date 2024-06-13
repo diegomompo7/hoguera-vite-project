@@ -83,11 +83,11 @@ const handleAudioEnded = (sceneNumber) => {
                 {[...Array(5)].map((_, index) => (
                     <SwiperSlide key={index} className='mySwiper__slider'>
                         <div className='mySwiper__up'>
-                            <h1 className='mySwiper__up--title'> <FormattedMessage id={`scene${index + 1}`} /></h1>
+                            <h1 className='mySwiper__up--title'> <FormattedMessage id={`scene${index}`} /></h1>
                         </div>
-                        <p className='mySwiper__description'><FormattedMessage id={`description${index + 1}`} /></p>
-                        <audio id={`audioPlayer${index + 1}`} ref={audioRefs.current[index]} onEnded={() => handleAudioEnded(index + 1)}>
-                            <source src={intl.formatMessage({ id: `audio${index + 1}` })} type="audio/mpeg" />
+                        <p className='mySwiper__description'><FormattedMessage id={`description${index}`} /></p>
+                        <audio id={`audioPlayer${index}`} ref={audioRefs.current[index]} onEnded={() => handleAudioEnded(index)}>
+                            <source src={intl.formatMessage({ id: `audio${index}` })} type="audio/mpeg" />
                             Tu navegador no soporta el elemento de audio.
                         </audio>
                         <button className='mySwiper__play' onClick={() => controlAudio(index + 1)}>
