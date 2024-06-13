@@ -53,10 +53,10 @@ export const Scenes = () => {
     const controlAudio = (sceneNumber) => {
         setIsPlayed(prevState => {
             const newState = [...prevState];
-            newState[sceneNumber - 1] = !newState[sceneNumber - 1];
+            newState[sceneNumber] = !newState[sceneNumber];
             return newState;
         });
-        const audioIndex = sceneNumber - 1;
+        const audioIndex = sceneNumber;
         const audio = audioRefs.current[audioIndex].current;
         if (audio) {
             if (isPlayed[audioIndex]) {
@@ -70,7 +70,7 @@ export const Scenes = () => {
 const handleAudioEnded = (sceneNumber) => {
     setIsPlayed(prevState => {
         const newState = [...prevState];
-        newState[sceneNumber - 1] = false;
+        newState[sceneNumber] = false;
         return newState;
     });
 };

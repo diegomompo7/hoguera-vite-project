@@ -29,9 +29,14 @@ body{
         width: 50%;
         align-self: center;
 
-        & img{
+        &--tecnocasa{
             width: 100%;
-            margin-bottom: 10px;
+        }
+
+        &--electrodepot{
+            width: 60%;
+            margin-top: 30px;
+            margin-left: 20px;
         }
     }
   

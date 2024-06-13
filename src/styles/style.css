@@ -26,9 +26,13 @@ body {
   width: 50%;
   align-self: center;
 }
-.header__sponsor img {
+.header__sponsor--tecnocasa {
   width: 100%;
-  margin-bottom: 10px;
+}
+.header__sponsor--electrodepot {
+  width: 60%;
+  margin-top: 30px;
+  margin-left: 20px;
 }
 
 .mySwiper {
@@ -84,6 +88,13 @@ body {
   position: absolute;
   bottom: 20px; /* Ajusta la posición de las flechas al final */
   top: auto;
+}
+
+.time {
+  font-size: 40px;
+  text-align: center;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {

@@ -1,4 +1,6 @@
 {
+    "scene0" : "Scene 0 Inglés",
+    "description0": "Description 0 Inglés",
     "scene1" : "Scene 1 Inglés",
     "description1": "Description 1 Inglés",
     "scene2" : "Scene 2 Inglés",
@@ -9,6 +11,7 @@
     "description4": "Description 4 Inglés",
     "scene5" : "Scene 5 Inglés",
     "description5": "Description 5 Inglés",
+    "audio0": "/assets/audio/English/Scene0.mp3",
     "audio1": "/assets/audio/English/Scene1.mp3",
     "audio2": "/assets/audio/English/Scene2.mp3",
     "audio3": "/assets/audio/English/Scene3.mp3",
