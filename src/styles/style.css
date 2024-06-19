@@ -51,10 +51,12 @@ body {
 .mySwiper__description {
   margin: auto;
   text-align: center;
+  margin-bottom: 3.125rem;
 }
 .mySwiper__play {
   margin-top: 1.6em;
   margin: auto;
+  align-items: center;
   font-size: 1.5625rem;
   border-radius: 2em;
   padding: 0.8em 0em;
