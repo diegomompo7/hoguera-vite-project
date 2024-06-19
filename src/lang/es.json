@@ -15,6 +15,7 @@
     "scene6" : "Escena 6 Español",
     "description6": "Descripción 6 Español",
     "audioAdult": "/assets/audio/Spanish/SceneAdult.mp3",
+    "audioKid" : "/assets/audio/Spanish/SceneKid.mp3",
     "audio1": "/assets/audio/Spanish/Scene1.mp3",
     "audio2": "/assets/audio/Spanish/Scene2.mp3",
     "audio3": "/assets/audio/Spanish/Scene3.mp3",
