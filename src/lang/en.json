@@ -1,6 +1,7 @@
 {
-    "scene0" : "Lara Blázquez Pérez",
-    "description0": "Description 0 Inglés",
+    "sceneAdult" : "Lara Blázquez Pérez",
+    "sceneKid" : "Xiana Ugeda Andrés",
+    "descriptionAdult": "Description Adult Inglés",
     "scene1" : "Scene 1 Inglés",
     "description1": "Description 1 Inglés",
     "scene2" : "Scene 2 Inglés",
@@ -13,7 +14,7 @@
     "description5": "Description 5 Inglés",
     "scene6" : "Scene 6 Inglés",
     "description6": "Description 6 Inglés",
-    "audio0": "/assets/audio/English/Scene0.mp3",
+    "audioAdult": "/assets/audio/English/SceneAdult.mp3",
     "audio1": "/assets/audio/English/Scene1.mp3",
     "audio2": "/assets/audio/English/Scene2.mp3",
     "audio3": "/assets/audio/English/Scene3.mp3",

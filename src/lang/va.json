@@ -1,6 +1,7 @@
 {
-    "sceneIntro" : "Lara Blázquez Pérez",
-    "descriptionIntro": "Descripció 0 Valenciano",
+    "sceneAdult" : "Lara Blázquez Pérez",
+    "sceneKid" : "Xiana Ugeda Andrés",
+    "descriptionAdult": "Descripció 0 Valenciano",
     "scene1" : "Escena 1 Valenciano",
     "description1": "Descripció 1 Valenciano",
     "scene2" : "Escena 2 Valenciano",
@@ -13,7 +14,7 @@
     "description5": "Descripció 5 Valenciano",
     "scene6" : "Escena 6 Valenciano",
     "description6": "Descripció 6 Valenciano",
-    "audioIntro": "/assets/audio/Valencia/Scene5.mp3",
+    "audioAdult": "/assets/audio/Valencia/Scene5.mp3",
     "audio1": "/assets/audio/Valencia/Scene1.mp3",
     "audio2": "/assets/audio/Valencia/Scene2.mp3",
     "audio3": "/assets/audio/Valencia/Scene3.mp3",

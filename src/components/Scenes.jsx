@@ -87,18 +87,31 @@ export const Scenes = () => {
 
             {initScene === -1 ? <div className="mySwiper">
                 <div className='mySwiper__slider'><div className='mySwiper__up'>
-                    <h1 className='mySwiper__up--title'> <FormattedMessage id={`sceneIntro`} /></h1>
+                    <h1 className='mySwiper__up--title'> <FormattedMessage id={`sceneAdult`} /></h1>
                 </div>
-                    <img src="./assets/img/img0.png" className='mySwiper__img'/>
-                    <audio id={`audioPlayerIntro`} ref={audioRefs.current[initScene + 1]} onEnded={() => handleAudioEnded(initScene + 1)}>
-                        <source src={intl.formatMessage({ id: `audioIntro` })} type="audio/mpeg" />
+                    <img src="./assets/img/imgAdult.png" className='mySwiper__img' />
+                    <audio id={`audioPlayerAdult`} ref={audioRefs.current[initScene + 1]} onEnded={() => handleAudioEnded(initScene + 1)}>
+                        <source src={intl.formatMessage({ id: `audioAdult` })} type="audio/mpeg" />
                         Tu navegador no soporta el elemento de audio.
                     </audio>
                     <button className='mySwiper__play mySwiper__play--intro' onClick={() => controlAudio(initScene + 1)}>
                         {isPlayed[initScene + 1] ? <HiSpeakerXMark /> : <HiSpeakerWave />}
                     </button> </div></div> :
 
-                initScene < 4 ?
+                initScene === 4 ? <div className="mySwiper">
+                    <div className='mySwiper__slider'><div className='mySwiper__up'>
+                        <h1 className='mySwiper__up--title'> <FormattedMessage id={`sceneKid`} /></h1>
+                    </div>
+                        <img src="./assets/img/imgKid.png" className='mySwiper__img' />
+                        <audio id={`audioPlayerKid`} ref={audioRefs.current[initScene + 1]} onEnded={() => handleAudioEnded(initScene + 1)}>
+                            <source src={intl.formatMessage({ id: `audioKid` })} type="audio/mpeg" />
+                            Tu navegador no soporta el elemento de audio.
+                        </audio>
+                        <button className='mySwiper__play mySwiper__play--intro' onClick={() => controlAudio(initScene + 1)}>
+                            {isPlayed[initScene + 1] ? <HiSpeakerXMark /> : <HiSpeakerWave />}
+                        </button> </div></div> :
+
+                    initScene < 4 &&
 
                     <Swiper modules={[Navigation]} loop={true} className="mySwiper" initialSlide={initScene != null ? initScene : 0} onSlideChange={handleSlideChange} navigation={true}>
 
@@ -114,27 +127,6 @@ export const Scenes = () => {
                                 </audio>
                                 <button className='mySwiper__play' onClick={() => controlAudio(((4 + index)) % 4 + 1)}>
                                     {isPlayed[((4 + index)) % 4 + 1] ? <HiSpeakerXMark /> : <HiSpeakerWave />}
-                                </button>
-                            </SwiperSlide>
-                        ))}
-
-                    </Swiper>
-                    : initScene >= 4 &&
-
-                    <Swiper modules={[Navigation]} loop={true} className="mySwiper" initialSlide={initScene != null ? initScene : 0} onSlideChange={handleSlideChange} navigation={true}>
-
-                        {[...Array(1)].map((_, index) => (
-                            <SwiperSlide key={`${((2 + index)) % 2 + 5}`} className='mySwiper__slider'>
-                                <div className='mySwiper__up'>
-                                    <h1 className='mySwiper__up--title'> <FormattedMessage id={`scene${((2 + index)) % 2 + 5}`} /></h1>
-                                </div>
-                                <p className='mySwiper__description'><FormattedMessage id={`description${((2 + index)) % 2 + 5}`} /></p>
-                                <audio id={`audioPlayer${((2 + index)) % 2 + 5}`} ref={audioRefs.current[((2 + index)) % 2 + 5]} onEnded={() => handleAudioEnded(((2 + index)) % 2 + 5)}>
-                                    <source src={intl.formatMessage({ id: `audio${((2 + index)) % 2 + 5}` })} type="audio/mpeg" />
-                                    Tu navegador no soporta el elemento de audio.
-                                </audio>
-                                <button className='mySwiper__play' onClick={() => controlAudio(((2 + index)) % 2 + 5)}>
-                                    {isPlayed[((2 + index)) % 2 + 5] ? <HiSpeakerXMark className='mySwiper__play--icon'/> : <HiSpeakerWave />}
                                 </button>
                             </SwiperSlide>
                         ))}
