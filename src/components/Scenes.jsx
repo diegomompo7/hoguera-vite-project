@@ -89,7 +89,7 @@ export const Scenes = () => {
                 <div className='mySwiper__slider'><div className='mySwiper__up'>
                     <h1 className='mySwiper__up--title'> <FormattedMessage id={`sceneIntro`} /></h1>
                 </div>
-                    <img src="../public/assets/img/img0.png" className='mySwiper__img'/>
+                    <img src="./assets/img/img0.png" className='mySwiper__img'/>
                     <audio id={`audioPlayerIntro`} ref={audioRefs.current[initScene + 1]} onEnded={() => handleAudioEnded(initScene + 1)}>
                         <source src={intl.formatMessage({ id: `audioIntro` })} type="audio/mpeg" />
                         Tu navegador no soporta el elemento de audio.
