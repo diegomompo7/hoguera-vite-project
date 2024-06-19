@@ -1,6 +1,6 @@
 {
-    "scene0" : "Escena 0 Español",
-    "description0": "Descripción 0 Español",
+    "sceneIntro" : "Lara Blázquez Pérez",
+    "descriptionIntro": "Descripción Intro Español",
     "scene1" : "Escena 1 Español",
     "description1": "Descripción 1 Español",
     "scene2" : "Escena 2 Español",
@@ -13,7 +13,7 @@
     "description5": "Descripción 5 Español",
     "scene6" : "Escena 6 Español",
     "description6": "Descripción 6 Español",
-    "audio0": "/assets/audio/Spanish/Scene5.mp3",
+    "audioIntro": "/assets/audio/Spanish/SceneIntro.mp3",
     "audio1": "/assets/audio/Spanish/Scene1.mp3",
     "audio2": "/assets/audio/Spanish/Scene2.mp3",
     "audio3": "/assets/audio/Spanish/Scene3.mp3",
