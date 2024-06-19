@@ -94,7 +94,7 @@ export const Scenes = () => {
                         <source src={intl.formatMessage({ id: `audioIntro` })} type="audio/mpeg" />
                         Tu navegador no soporta el elemento de audio.
                     </audio>
-                    <button className='mySwiper__play' onClick={() => controlAudio(initScene + 1)}>
+                    <button className='mySwiper__play mySwiper__play--intro' onClick={() => controlAudio(initScene + 1)}>
                         {isPlayed[initScene + 1] ? <HiSpeakerXMark /> : <HiSpeakerWave />}
                     </button> </div></div> :
 
