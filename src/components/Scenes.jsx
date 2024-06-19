@@ -41,7 +41,8 @@ export const Scenes = () => {
 
     let initScene = params.get('init');
 
-    initScene !== null ? initScene : initScene = '0'
+    initScene !== null ? initScene-=1 : initScene = -1
+    console.log(initScene)
 
     const handleSlideChange = () => {
         audioRefs.current.forEach((ref, index) => {
@@ -82,17 +83,17 @@ export const Scenes = () => {
     return (
         <div>
 
-            {initScene === '0' ? <div className="mySwiper">
+            {initScene === -1 ? <div className="mySwiper">
                 <div className='mySwiper__slider'><div className='mySwiper__up'>
                     <h1 className='mySwiper__up--title'> <FormattedMessage id={`sceneIntro`} /></h1>
                 </div>
                     <p className='mySwiper__description'><FormattedMessage id={`descriptionIntro`} /></p>
-                    <audio id={`audioPlayerIntro`} ref={audioRefs.current[initScene]} onEnded={() => handleAudioEnded(initScene)}>
+                    <audio id={`audioPlayerIntro`} ref={audioRefs.current[initScene+1]} onEnded={() => handleAudioEnded(initScene+1)}>
                         <source src={intl.formatMessage({ id: `audioIntro` })} type="audio/mpeg" />
                         Tu navegador no soporta el elemento de audio.
                     </audio>
-                    <button className='mySwiper__play' onClick={() => controlAudio(initScene)}>
-                        {isPlayed[initScene] ? <HiSpeakerXMark /> : <HiSpeakerWave />}
+                    <button className='mySwiper__play' onClick={() => controlAudio(initScene+1)}>
+                        {isPlayed[initScene+1] ? <HiSpeakerXMark /> : <HiSpeakerWave />}
                     </button> </div></div> :
 
 
@@ -101,7 +102,7 @@ export const Scenes = () => {
                     {[...Array(4)].map((_, index) => (
                         <SwiperSlide key={`${((4 +index))%4+1}`} className='mySwiper__slider'>
                             <div className='mySwiper__up'>
-                                <h1 className='mySwiper__up--title'> <FormattedMessage id={`scene${((4 +index))%4+1}`} /></h1>
+                                <h1 className='mySwiper__up--title'> <FormattedMessage id={`scene${((4 +(index)))%4+1}`} /></h1>
                             </div>
                             <p className='mySwiper__description'><FormattedMessage id={`description${((4 +index))%4+1}`} /></p>
                             <audio id={`audioPlayer${((4 +index))%4+1}`} ref={audioRefs.current[((4 +index))%4+1]} onEnded={() => handleAudioEnded(((4 +index))%4+1)}>
