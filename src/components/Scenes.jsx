@@ -120,7 +120,6 @@ export const Scenes = () => {
                                 <div className='mySwiper__up'>
                                     <h1 className='mySwiper__up--title'> <FormattedMessage id={`scene${((4 + (index))) % 4 + 1}`} /></h1>
                                 </div>
-                                <p className='mySwiper__description'><FormattedMessage id={`description${((4 + index)) % 4 + 1}`} /></p>
                                 <audio id={`audioPlayer${((4 + index)) % 4 + 1}`} ref={audioRefs.current[((4 + index)) % 4 + 1]} onEnded={() => handleAudioEnded(((4 + index)) % 4 + 1)}>
                                     <source src={intl.formatMessage({ id: `audio${((4 + index)) % 4 + 1}` })} type="audio/mpeg" />
                                     Tu navegador no soporta el elemento de audio.
