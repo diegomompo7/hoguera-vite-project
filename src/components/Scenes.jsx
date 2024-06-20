@@ -9,7 +9,8 @@ import { LanguageSelector } from "../App.jsx";
 import React, { useRef, useState, useContext, useEffect, createRef } from 'react';
 import { HiSpeakerWave } from "react-icons/hi2";
 import { HiSpeakerXMark } from "react-icons/hi2";
-
+import { FaPlay } from "react-icons/fa";
+import { FaPause } from "react-icons/fa";
 
 
 // import required modules
@@ -24,6 +25,7 @@ export const Scenes = () => {
     const { language } = useContext(LanguageSelector);
     const audioRefs = useRef(Array.from({ length: 7 }, () => createRef()))
     const [isPlayed, setIsPlayed] = useState([false, false, false, false, false, false, false]); // Un estado para cada escena
+    const [firstPlay, setFirstPlay] = useState(Array(7).fill(true));
 
     console.log(isPlayed)
 
@@ -34,6 +36,7 @@ export const Scenes = () => {
                 ref.current.currentTime = 0;
                 ref.current.load();
                 setIsPlayed(prevState => prevState.map((state, i) => i === index ? false : state)); // Reiniciar el estado de reproducción de la escena
+                setFirstPlay(Array(7).fill(true));
             }
         });
     }, [language]);
@@ -57,15 +60,22 @@ export const Scenes = () => {
     };
 
     const controlAudio = (sceneNumber) => {
+        if(firstPlay[sceneNumber]){
+            setFirstPlay(prevFirstPlay => {
+                const newFirstPlay = [...prevFirstPlay];
+                newFirstPlay[sceneNumber] = false;
+                return newFirstPlay;
+            });
+        }
+
         setIsPlayed(prevState => {
             const newState = [...prevState];
             newState[sceneNumber] = !newState[sceneNumber];
             return newState;
         });
-        const audioIndex = sceneNumber;
-        const audio = audioRefs.current[audioIndex].current;
+        const audio = audioRefs.current[sceneNumber].current;
         if (audio) {
-            if (isPlayed[audioIndex]) {
+            if (isPlayed[sceneNumber]) {
                 audio.pause();
             } else {
                 audio.play();
@@ -78,6 +88,11 @@ export const Scenes = () => {
             const newState = [...prevState];
             newState[sceneNumber] = false;
             return newState;
+        });
+        setFirstPlay(prevFirstPlay => {
+            const newFirstPlay = [...prevFirstPlay];
+            newFirstPlay[sceneNumber] = true;
+            return newFirstPlay;
         });
     };
 
@@ -95,7 +110,7 @@ export const Scenes = () => {
                         Tu navegador no soporta el elemento de audio.
                     </audio>
                     <button className='mySwiper__play mySwiper__play--intro' onClick={() => controlAudio(initScene + 1)}>
-                        {isPlayed[initScene + 1] ? <HiSpeakerXMark /> : <HiSpeakerWave />}
+                        {firstPlay[initScene + 1] ?  <FaPlay /> : isPlayed[initScene + 1] ? <FaPlay /> : <FaPause />}
                     </button> </div></div> :
 
                 initScene === 4 ? <div className="mySwiper">
@@ -120,13 +135,13 @@ export const Scenes = () => {
                                 <div className='mySwiper__up'>
                                     <h1 className='mySwiper__up--title'> <FormattedMessage id={`scene${((4 + (index))) % 4 + 1}`} /></h1>
                                 </div>
-                                <p className='mySwiper__description'><FormattedMessage id={`description${((4 + index)) % 4 + 1}`} /></p>
+                                {/*<p className='mySwiper__description'><FormattedMessage id={`description${((4 + index)) % 4 + 1}`} /></p>*/}
                                 <audio id={`audioPlayer${((4 + index)) % 4 + 1}`} ref={audioRefs.current[((4 + index)) % 4 + 1]} onEnded={() => handleAudioEnded(((4 + index)) % 4 + 1)}>
                                     <source src={intl.formatMessage({ id: `audio${((4 + index)) % 4 + 1}` })} type="audio/mpeg" />
                                     Tu navegador no soporta el elemento de audio.
                                 </audio>
                                 <button className='mySwiper__play' onClick={() => controlAudio(((4 + index)) % 4 + 1)}>
-                                    {isPlayed[((4 + index)) % 4 + 1] ? <HiSpeakerXMark /> : <HiSpeakerWave />}
+                                    {firstPlay[((4 + index)) % 4 + 1] ? <FaPlay /> : isPlayed[((4 + index)) % 4 + 1] ? <FaPlay /> : <FaPause />}
                                 </button>
                             </SwiperSlide>
                         ))}
