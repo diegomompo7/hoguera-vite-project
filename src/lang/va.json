@@ -14,7 +14,7 @@
     "description5": "Descripció 5 Valenciano",
     "scene6" : "Escena 6 Valenciano",
     "description6": "Descripció 6 Valenciano",
-    "audioAdult": "/assets/audio/Valencia/Scene5.mp3",
+    "audioAdult": "/assets/audio/Valencia/SceneAdult.mp3",
     "audioKid" : "/assets/audio/Valencia/SceneKid.mp3",
     "audio1": "/assets/audio/Valencia/Scene1.mp3",
     "audio2": "/assets/audio/Valencia/Scene2.mp3",
